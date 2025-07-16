@@ -1,0 +1,15 @@
+import os, sysconfig
+get, ocwd = globals()['get'], os.getcwd() # For readers | THIS EXISTS
+#region setup
+os.chdir(sysconfig.get_paths()['purelib']) #great!
+if os.path.exists("pvenvgh"): exit()
+os.makedirs(os.path.join('pvenvgh','commands')); os.chdir("pvenvgh")
+with open('.version-control') as f: f.write(get('.version-control'))
+with open(os.path.join('commands','example.py'),'w') as f: f.write(get("commands/example.py"))
+with open('__init__.py') as f: f.write(get("main.py"))
+#endregion
+#region launch
+os.chdir(ocwd)
+import pvenvgh
+pvenvgh.main(get)
+#endregion
