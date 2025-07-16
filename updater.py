@@ -3,7 +3,7 @@ import json, os, hashlib
 
 def is_outdated():
   with open('.version-control') as f:
-    return f.read().strip() == get('.version-control').strip()
+    return f.read().strip() != get('.version-control').strip()
 
 def list_github_files():
     req = request.Request("https://api.github.com/repos/i-am-new-blip/wpt/contents/", headers={'User-Agent': 'Mozilla/5.0'})
