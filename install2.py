@@ -1,17 +1,1 @@
-import os, sysconfig
-ocwd = os.getcwd() # For readers | THIS EXISTS
-#region setup
-os.chdir(sysconfig.get_paths()['purelib']) #great!
-if os.path.exists("pvenvgh"): exit()
-os.makedirs(os.path.join('pvenvgh','commands')); os.chdir("pvenvgh")
-with open('.version-control','w') as f: f.write(get('.version-control'))
-with open('updater.py','w') as f: f.write(get('updater.py'))
-with open(os.path.join('commands','example.py'),'w') as f: f.write(get("commands/example.py"))
-with open('__init__.py','w') as f: f.write(get("__init__.py"))
-#endregion
-#region launch
-del sysconfig,get,request
-os.chdir(ocwd)
-del os,ocwd
-print("\x1b[2J\x1b[HPlease type out \"import pvenvgh as p; p.main()\"")
-#endregion
+[([(f1:=open([os.chdir([os.makedirs(os.path.join('pvenvgh','commands')),"pvenvgh"][1]),'.version-control'][1],'w')).write(get('.version-control')),(f2:=open('__init__.py','w')).write(get("__init__.py")),(f3:=open('updater.py','w')).write(get('updater.py')),(f4:=open(os.path.join('commands','example.py'),'w')).write(get("commands/example.py")),(f5:=open('static_elements.py','w')).write('get:=((lambda r:lambda f:(r.urlopen(f"https://raw.githubusercontent.com/i-am-new-blip/wpt/refs/heads/main/{f}").read().decode()))(((request := __import__(\'urllib.request\', fromlist=[\'\'])))))'),map((lambda f:f.close()),[f1,f2,f3,f4,f5])] if not os.path.exists([(os := __import__("os")).chdir(__import__('sysconfig').get_paths(vars=[(ocwd:=os.getcwd()),None][1])['purelib']),"pvenvgh"][1]) else None),print([os.chdir(ocwd),"\x1b[2J\x1b[HPlease type out \"import pvenvgh as p; p.main()\""][1])]
