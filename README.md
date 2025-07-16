@@ -42,7 +42,7 @@ You’re all set! The script will handle the rest.
 
 ## License
 
-MIT © YourNameHere
+MIT © i-am-new-blip
 
 ---
 
