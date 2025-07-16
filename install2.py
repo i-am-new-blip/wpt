@@ -7,7 +7,7 @@ os.makedirs(os.path.join('pvenvgh','commands')); os.chdir("pvenvgh")
 with open('.version-control','w') as f: f.write(get('.version-control'))
 with open('updater.py','w') as f: f.write(get('updater.py'))
 with open(os.path.join('commands','example.py'),'w') as f: f.write(get("commands/example.py"))
-with open('__init__.py') as f: f.write(get("main.py"))
+with open('__init__.py','w') as f: f.write(get("__init__.py"))
 #endregion
 #region launch
 del sysconfig,get,request
