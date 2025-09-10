@@ -27,8 +27,17 @@ def understand_line(text):
       )
     return JSON_tokens
 
-def gv(): 
-input_color = "\033[96m"  # bright cyan
-reset_color = "\033[0m"
-line = input(f"{input_color}$ {reset_color}")
+with open('.version-control') as f: v= f.read()
 
+print(f'Welcome to pvenvgh v{v}')
+t="\033[96m$ \033[0m"
+l=3
+while True:
+    x=input(t)
+    try:
+        UL = understand_line(x)
+        cmds = [understand_single_command(i) for i in UL]
+        print(cmds)
+    except: pass
+        
+    
