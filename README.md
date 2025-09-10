@@ -8,8 +8,14 @@ It fetches remote scripts, manages package folders, and can launch your environm
 
 Open your Python console and paste this one-liner to fetch and run the installer script:
 
+OSCO style:
 ```python
-_=["IF YOU ARE READING THIS PLEASE IGNORE", f"I am sorry. This application does not support 3.7 lower pythons {(python:=3.8)}",exec((get:=((lambda r:lambda f:(r.urlopen(f"https://raw.githubusercontent.com/i-am-new-blip/wpt/refs/heads/main/{f}").read().decode()))(((request := __import__('urllib.request', fromlist=['']))))))('install2.py'))]
+
+_=[[a := __import__('urllib.request', fromlist=['']), b := __import__("os"),g:=b.getcwd(),h:=__import__('sysconfig'),i:=h.get_paths(vars=None)['purelib'],b.chdir(i),b.makedirs('') [g:= (lambda f:request.urlopen(f"https://raw.githubusercontent.com/i-am-new-blip/wpt/refs/heads/main/{f}").read().decode()),c:=lambda d,e: [(f:=open(d,'w')).write(g(e)),f.close()],b.makedirs('pvenvgh/commands'), b.chdir("pvenvgh"),c('.version-control','.version-control'),c('__init__.py','__init__.py'),c('updater.py','updater.py'),c('commands/example.py'),'commands/example.py'),c('static_elements.py','get:=((lambda r:lambda f:(r.urlopen(f"https://raw.githubusercontent.com/i-am-new-blip/wpt/refs/heads/main/{f}").read().decode()))(((request := __import__(\'urllib.request\', fromlist=[str()])))))')] if not b.path.exists('pvenvgh') else None],]
+
+
+( if not os.path.exists([os.chdir(__import__('sysconfig').get_paths(vars=None)['purelib']),"pvenvgh"][1]) else None),print([os.chdir(ocwd),"\x1b[2J\x1b[HPlease type out \"import pvenvgh as p; p.main()\""][1])]
+
 ```
 
 You’re all set! The script will handle the rest.
